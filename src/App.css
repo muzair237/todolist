@@ -1,38 +1,547 @@
-.App {
-  text-align: center;
+body p {
+    font-family: 'Nanum Myeongjo', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bgImageContainer {
+    width: 100%;
+    height: 35rem;
+    position: relative;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-navbar {
+    background-color: #192138 !important;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom-navbar a {
+    color: #ffe4c4 !important;
+    font-family: 'Tinos', serif;
+    font-size: 1.1rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+@media (max-width: 576px) {
+    .bgImageContainer {
+        height: 29rem;
+        /* reduce height to 30rem on screens <= 576px */
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .bgImageContainer {
+        height: 35rem;
+        /* reduce height to 29rem */
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .bgImageContainer {
+        height: 38rem;
+        /* reduce height to 29rem */
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .bgImageContainer {
+        height: 40.9rem;
+        /* reduce height to 29rem */
+    }
+}
+
+.headingText {
+    top: 58%;
+    left: 5%;
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    color: rgb(209, 170, 170);
+}
+
+.headingText h1 {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.supportingText {
+    top: 70%;
+    left: 5.9%;
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    color: rgb(209, 170, 170);
+}
+
+.supportingText h4 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* Media Queries for heading Text */
+@media (max-width: 576px) {
+    .headingText h1 {
+        font-size: 22px;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .headingText h1 {
+        font-size: 27px;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .headingText h1 {
+        font-size: 32px;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .headingText h1 {
+        font-size: 35px;
+    }
+}
+
+/* Media Queries for supporting Text */
+@media (max-width: 576px) {
+    .supportingText h4 {
+        font-size: 15px;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .supportingText h4 {
+        font-size: 17px;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .supportingText h4 {
+        font-size: 20px;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .supportingText h4 {
+        font-size: 22px;
+    }
+}
+
+.introContainer {
+    background-color: #161b2a;
+    color: rgb(213, 198, 198);
+}
+
+.introductionText p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.img-fluid-checkList {
+    width: 11rem;
+}
+
+/* Media Queries for Image (CheckList) */
+@media (max-width: 576px) {
+    .img-fluid-checkList {
+        width: 5rem;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .img-fluid-checkList {
+        width: 7rem;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .img-fluid-checkList {
+        width: 9.5;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .img-fluid-checkList {
+        width: 11rem;
+
+    }
+}
+
+.introductionHeading h2 {
+    font-weight: 900
+}
+
+.introductionText p {
+    font-size: 18px;
+}
+
+/* Media Queries for Introductory Heading */
+@media (max-width: 576px) {
+    .introductionHeading h1 {
+        font-size: 22px;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .introductionHeading h1 {
+        font-size: 27px;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .introductionHeading h1 {
+        font-size: 32px;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .introductionHeading h1 {
+        font-size: 35px;
+    }
+}
+
+/* Media Queries for Introductory text */
+@media (max-width: 576px) {
+    .introductionText p {
+        font-size: 15px;
+    }
+
+    .introductionText button {
+        font-size: 0.8rem;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .introductionText p {
+        font-size: 16px;
+    }
+
+    .introductionText button {
+        font-size: 0.85rem;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .introductionText p {
+        font-size: 17px;
+    }
+
+    .introductionText button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .introductionText p {
+        font-size: 18px;
+    }
+
+    .introductionText button {
+        font-size: 1rem;
+    }
+}
+
+/* Footer*/
+.footerSpacer{
+    position: relative;
+}
+.footer {
+    background-color: #192138;
+    height: 5.2rem;
+    
+    
+}
+
+
+.footer img {
+    width: 3.5rem;
+}
+
+.round {
+    height: 2.6rem;
+    width: 2.7rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.7rem;
+    transition: all 0.3s ease-in-out;
+    color: #b66a6a;
+}
+
+.round:hover {
+    transform: scale(1.1);
+    background-color: #f9004d;
+    color: white;
+}
+
+.footer-img img {
+    width: 3.8rem;
+    margin-top: 0.6rem;
+}
+
+.iconDiv {
+    margin-top: 1.35rem;
+}
+
+.footerText p {
+    margin-top: 1.7rem;
+}
+
+/* Media Queries for Footer materials */
+@media (max-width: 576px) {
+    .footer-img img {
+        width: 3.2rem;
+        margin-top: 13%;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .footer-img img {
+        width: 3.4rem;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .footer-img img {
+        width: 3.6rem;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .footer-img img {
+        width: 3.8rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .iconDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-top: 0%;
+    }
+
+    .round {
+        height: 2.1rem;
+        width: 2.1rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.7rem;
+        transition: all 0.3s ease-in-out;
+        color: #b66a6a;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .iconDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-top: 0%;
+
+    }
+
+    .round {
+        height: 2.3rem;
+        width: 2.4rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.7rem;
+        transition: all 0.3s ease-in-out;
+        color: #b66a6a;
+    }
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .round {
+        height: 2.5rem;
+        width: 2.6rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.7rem;
+        transition: all 0.3s ease-in-out;
+        color: #b66a6a;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .round {
+        height: 2.6rem;
+        width: 2.7rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.7rem;
+        transition: all 0.3s ease-in-out;
+        color: #b66a6a;
+    }
+}
+
+.footerText p {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    .footerText p {
+        font-size: 0.7rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Media query for screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .footerText p {
+        font-size: 0.8rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: left;
+    }
+
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .footerText p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media query for screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .footerText p {
+        font-size: 1rem;
+    }
+}
+
+/*Add task*/
+#input {
+    width: 36em;
+    height: 3em;
+    border-radius: 0.3em;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    width: 28%;
+    max-width: 15rem;
+    background-color: #f9f9f9;
+    color: #555;
+    appearance: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+option {
+    font-size: 1rem;
+    background-color: #d7d7d7;
+    color: #3b2b2b;
+}
+
+.datepicker {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.datepicker label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.datepicker input[type="date"] {
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #eee;
+    font-size: 1.2rem;
+    padding: 8px;
+    width: 100%;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.datepicker input[type="date"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
